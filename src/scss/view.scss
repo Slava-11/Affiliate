@@ -1,0 +1,80 @@
+.view{
+    &-container{
+        padding-left: 10px;
+        padding-right: 10px;
+        @include for-tablet{
+            padding-left: 38px;
+            padding-right: 38px;
+        }
+        @include for-desktop{
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+        @include for-desktop-HD{
+            padding-left: 145px;
+            padding-right: 145px;
+        }
+    }
+    &__content{
+        margin-top: 100px;
+        padding-bottom: 30px;
+        border-radius: 10px;
+        background: {
+            image: url(/src/img/background.jpg);
+            repeat: no-repeat;
+            position: center;
+            size: cover;
+        }
+        @include for-desktop{
+            display: flex;
+            align-items: center;
+        }
+        &-img{
+            display: block;
+            max-width: 50px;
+            margin: 0px auto;
+            padding-top: 30px;
+            @include for-desktop-HD{
+                margin: 0px;
+                margin-left: 30px;
+            }
+        }
+        &-title{
+            font-size: 28px;
+            text-align: center;
+            color: $MainColor;
+            font-family: 'Bitter', serif;
+            padding-top: 35px;
+            @include for-desktop-HD{
+                margin-left: 12px;
+            }
+        }
+        &-button{
+            text-decoration: none;
+            display: block;
+            font-size: 15px;
+            color: $White;
+            max-width: 111px;
+            text-align: center;
+            padding: 15px;
+            background-color: $MainGreenColor;
+            font-family: 'Raleway', sans-serif;
+            border-radius: 5px;
+            margin: 0px auto;
+            margin-top: 30px;
+            &:hover{
+                transition: 0.4s;
+                background-color: rgb(15, 136, 64);
+            }
+            &:active{
+                transition: 0.1s;
+                color: $Gray;
+            }
+            @include for-desktop-HD{
+                margin: 0px;
+                margin-top: 30px;
+                margin-left: 280px;
+            }
+        }
+    }
+}

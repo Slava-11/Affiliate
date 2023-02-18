@@ -1,0 +1,147 @@
+.blog{
+    &-container{
+        padding-top: 70px;
+        padding-left: 10px;
+        padding-right: 10px;
+        @include for-tablet{
+            padding-left: 38px;
+            padding-right: 38px;
+        }
+        @include for-desktop{
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+        @include for-desktop-HD{
+            padding-left: 145px;
+            padding-right: 145px;
+        }
+    }
+    &__title{
+        font-size: 32px;
+        font-family: 'Bitter', serif;
+        color: $MainColor;
+        text-align: center;
+        @include for-tablet{
+            text-align: center;
+        }
+        @include for-desktop{
+            text-align: left;
+            max-width: 840px;
+            margin: 0px auto;
+        }
+        @include for-desktop-HD{
+            max-width: 100%;
+        }
+    }
+    &__content{
+        @include for-desktop{
+            display: grid;
+            grid-template-columns: 555px 245px;
+            grid-template-rows: 200px 200px 200px;
+            gap: 40px;
+            max-width: 840px;
+            margin: 0px auto;
+            padding-top: 33px;
+        }
+        @include for-desktop-HD{
+            max-width: 100%;
+            grid-template-columns: 555px 500px;
+            grid-template-rows: 150px 150px 150px;
+            gap: 20px;
+        }
+    }
+    &__card{
+        padding-top: 20px;
+        @include for-tablet{
+            width: 500px;
+            margin: 0px auto;
+        }
+        @include for-desktop{
+            width: 245px;
+            padding-top: 0px;
+        }
+        @include for-desktop-HD{
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            width: 100%;
+        }
+        &-img{
+            width: 100%;
+            @include for-desktop-HD{
+                width: 245px;
+            }
+        }
+        &-title{
+            font-size: 30px;
+            font-family: 'Bitter', serif;
+            color: $MainColor;
+            padding-top: 9px;
+            line-height: 35px;
+            text-align: center;
+            @include for-desktop{
+                text-align: left;
+            }
+        }
+        &-subtitle{
+            font-size: 15px;
+            line-height: 20px;
+            font-family: 'Raleway', sans-serif;
+            padding-top: 13px;
+            text-align: center;
+            text-align: center;
+            @include for-desktop{
+                text-align: left;
+            }
+        }
+    }
+    &__big-card{
+        padding-top: 33px;
+        @include for-desktop{
+            grid-row: span 3;
+            width: 555px;
+            padding-top: 0px;
+        }
+        @include for-desktop-HD{
+            display: block;
+            
+        }
+        &-img{
+            width: 100%;
+        }
+        &-subtitle{
+            text-align: center;
+            @include for-desktop{
+                text-align: left;
+            }
+        }
+    }
+    &__button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        @include for-tablet{
+            margin-top: 40px;
+        }
+        @include for-desktop{
+            justify-content: left;
+        }
+        @include for-desktop-HD{
+            margin-top: 75px;
+        }
+        &-view{
+            text-decoration: none;
+            font-size: 16px;
+            color: $MainColor;
+            &:hover{
+                transition: 0.4s;
+                margin-left: 10px;
+            }
+            &:active{
+                transition: 0.1s;
+                color: $Gray;
+            }
+        }
+    }
+}

@@ -1,0 +1,215 @@
+.header{
+    &-container{
+        padding-left: 10px;
+        padding-right: 10px;
+        @include for-tablet{
+            padding-left: 38px;
+            padding-right: 38px;
+        }
+        @include for-desktop{
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+        @include for-desktop-HD{
+            padding-left: 145px;
+            padding-right: 145px;
+        }
+    }
+    &__top-line{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 85px;
+        padding-top: 15px;
+        box-shadow: 0px 1px 2px rgba(216, 216, 216, 1);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        @include for-desktop{
+            justify-content: left;
+        }
+    }
+    &__logo{
+        display: block;
+        margin-right: 35px;
+    }
+    &__burger{
+        height: 40px;
+        width: 40px;
+        background-color: rgba(83, 109, 122, 1);
+        border-radius: 3px;
+        cursor: pointer;
+        @include for-desktop{
+            display: none;
+        }
+        &-items{
+            padding-top: 15px;
+        }
+        &-item{
+            height: 2px;
+            width: 12px;
+            background-color: rgba(255, 199, 40, 1);
+            margin: 0px auto;
+            margin-bottom: 2px;
+        }
+    }
+    
+    &__item{
+        display: none;
+        margin-right: 50px;
+        :active{
+            transition: 0.1s;
+            color: $Gray;
+        }
+        &-sing-up{
+            @include for-desktop-HD{
+                margin-left: 200px;
+            }
+        }
+        @include for-desktop{
+            display: block;
+            display: flex;
+            align-items: center;
+        }
+        &-img{
+            @include for-desktop{
+                display: block;
+            }
+        }
+        &-text{
+            @include for-desktop{
+                text-decoration: none;
+                font-family: 'Raleway', sans-serif;
+                color: $MainColor;
+                font-size: 14px;
+                text-align: center;
+            }
+            @include for-desktop-HD{
+                padding-left: 10px;
+            }
+        }
+    }
+    &__content{
+        background-color: $BackgroundColor;
+        max-width: 100%;
+        margin-top: 60px;
+        border-radius: 10px;
+        overflow: hidden;
+        padding-bottom: 20px;
+        @include for-tablet{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @include for-desktop{
+            justify-content: left;
+            padding-bottom: 65px;
+            gap: 50px;
+        }
+        @include for-desktop-HD{
+            padding-bottom: 50px;
+        }
+        
+    }
+    &__img{
+        width: 100%;
+        padding-top: 20px;
+        @include for-tablet{
+            width: 500px;
+            height: 386px;
+            margin: 0px auto;
+            padding-top: 50px;
+        }
+        @include for-desktop{
+            padding-top: 65px;
+            margin: 0px;
+            width: 400px;
+            height: 411px;
+            padding-left: 20px;
+        }
+        @include for-desktop-HD{
+            width: 500px;
+            height: 386px;
+            padding-top: 50px;
+            padding-left: 50px;
+        }
+    }
+    &__use{
+        @include for-desktop{
+            max-width: 400px;
+        }
+        @include for-desktop-HD{
+            max-width: 484px;
+        }
+        &-top-title{
+            margin-top: 20px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 18px;
+            color: $GreenColor;
+            text-align: center;
+            @include for-desktop{
+                margin-top: 65px;
+                text-align: left;
+            }
+        }
+        &-title{
+            margin-top: 8px;
+            font-family: 'Bitter', serif;
+            font-size: 47px;
+            color: $MainColor;
+            line-height: 52px;
+            text-align: center;
+            @include for-tablet{
+                max-width: 484px;
+                font-size: 40px;
+            }
+            @include for-desktop{
+                text-align: left;
+            }
+            @include for-desktop-HD{
+                font-size: 47px;
+            }
+        }
+        &-subtitle{
+            margin-top: 22px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 18px;
+            line-height: 24px;
+            color: $MainColor;
+            text-align: center;
+            @include for-tablet{
+                max-width: 474px;
+            }
+            @include for-desktop{
+                text-align: left;
+            }
+            &-word{
+                font-weight: 700;
+            }
+        }
+        &-button{
+            text-align: center;
+            display: block;
+            max-width: 161px;
+            text-decoration: none;
+            font-size: 15px;
+            font-family: 'Raleway', sans-serif;
+            color: $White;
+            padding: 15px;
+            background-color: $MainGreenColor;
+            border-radius: 5px;
+            margin: 0px auto;
+            margin-top: 25px;
+            &:hover{
+                transition: 0.4s;
+                background-color: rgb(20, 137, 67);
+            }
+            &:active{
+                transition: 0.1s;
+                color: $Gray;
+            }
+            @include for-desktop{
+                margin-left: 0px;
+            }
+        }
+    }
+}

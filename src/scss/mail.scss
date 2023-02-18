@@ -1,0 +1,164 @@
+.mail{
+    margin-top: 50px;
+    padding-left: 10px;
+        padding-right: 10px;
+        @include for-tablet{
+            padding-left: 38px;
+            padding-right: 38px;
+        }
+        @include for-desktop{
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+        @include for-desktop-HD{
+            padding-left: 145px;
+            padding-right: 145px;
+            margin-top: 100px;
+        }
+    &-container{
+        background: {
+            image: url(/src/img/main-background.jpg);
+            repeat: no-repeat;
+            position: center;
+            size: cover;
+        }
+        border-radius: 10px;
+        overflow: hidden;
+        @include for-desktop{
+            display: flex;
+        }
+        @include for-desktop-HD{
+            gap: 100px;
+        }
+    }
+    &__img{
+        @include for-desktop-HD{
+            padding-left: 50px;
+        }
+        &-letter{
+            width: 100%;
+            @include for-tablet{
+                display: block;
+                 width: 500px;
+                 height: 350px;
+                 margin: 0px auto;
+            }
+            @include for-desktop{
+                width: 430px;
+                height: 300px;
+                margin-top: 40px;
+            }
+        }
+    }
+    &__content{
+        padding-bottom: 30px;
+    }
+    &__title-container{
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        justify-content: center;
+        @include for-desktop{
+            justify-content: left;
+            margin-top: 40px;
+        }
+    }
+    &__title-circle-img{
+        width: 60px;
+        height: 60px;
+        background-color: $White;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__title{
+        font-size: 30px;
+        font-family: 'Bitter', serif;
+        color: $MainColor;
+        padding-left: 10px;
+    }
+    &__subtitle{
+        font-size: 18px;
+        line-height: 24px;
+        color: $MainColor;
+        font-family: 'Raleway', sans-serif;
+        padding-top: 45px;
+        text-align: center;
+        @include for-tablet{
+            max-width: 500px;
+            margin: 0px auto;
+            text-align: center;
+        }
+        @include for-desktop{
+            text-align: left;
+        }
+         
+    }
+    &__your-email-text{
+        display: block;
+        width: 300px;
+        height: 50px;
+        margin: 0px auto;
+        border-radius: 5px;
+        border: 1px solid rgba(170, 188, 197, 1);
+        text-align: center;
+        font-size: 12px;
+        color: rgba(83, 109, 122, 1);
+        font-family: 'Raleway', sans-serif;
+        margin-top: 20px;
+        @include for-desktop{
+            width: 350px;
+            margin: 0px;
+            margin-top: 20px;
+            text-align: left;
+            padding-left: 16px;
+        }
+    }
+    &__buttons{
+        display: flex;
+        align-items: center;
+        max-width: 200px;
+        margin: 0px auto;
+        margin-top: 30px;
+        @include for-desktop{
+            margin: 0px;
+            margin-top: 30px;
+        }
+    }
+    &__button{
+        text-decoration: none;
+        display: block;
+        max-width: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        text-align: center;
+        font-size: 12px;
+        font-family: 'Raleway', sans-serif;
+        &-submit{
+            background-color: rgba(255, 199, 40, 1);
+            color: $Black;
+            font-weight: 700;
+            border-radius: 5px;
+            &:hover{
+                transition: 0.4s;
+                background-color: rgb(233, 175, 15);
+            }
+            &:active{
+                transition: 0.1s;
+                color: $White;
+            }
+        }
+        &-policy{
+            &:active{
+                transition: 0.1s;
+                color: $Black;
+            }
+            max-width: 120px;
+            text-align: left;
+            color: rgba(83, 109, 122, 1);
+        }
+    }
+}
