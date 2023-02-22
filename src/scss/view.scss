@@ -1,20 +1,4 @@
 .view{
-    &-container{
-        padding-left: 10px;
-        padding-right: 10px;
-        @include for-tablet{
-            padding-left: 38px;
-            padding-right: 38px;
-        }
-        @include for-desktop{
-            padding-left: 70px;
-            padding-right: 70px;
-        }
-        @include for-desktop-HD{
-            padding-left: 145px;
-            padding-right: 145px;
-        }
-    }
     &__content{
         margin-top: 100px;
         padding-bottom: 30px;
@@ -42,8 +26,6 @@
         &-title{
             font-size: 28px;
             text-align: center;
-            color: $MainColor;
-            font-family: 'Bitter', serif;
             padding-top: 35px;
             @include for-desktop-HD{
                 margin-left: 12px;
@@ -57,11 +39,13 @@
             max-width: 111px;
             text-align: center;
             padding: 15px;
-            background-color: $MainGreenColor;
-            font-family: 'Raleway', sans-serif;
+            background-color: $Green;
             border-radius: 5px;
-            margin: 0px auto;
-            margin-top: 30px;
+            margin: {
+                left: auto;
+                right: auto;
+                top: 30px;
+            }
             &:hover{
                 transition: 0.4s;
                 background-color: rgb(15, 136, 64);
@@ -71,9 +55,10 @@
                 color: $Gray;
             }
             @include for-desktop-HD{
-                margin: 0px;
-                margin-top: 30px;
-                margin-left: 280px;
+                margin: {
+                    top: 30px;
+                    left: 280px;
+                }
             }
         }
     }

@@ -2,21 +2,7 @@
     margin-top: 100px;
     background-color: rgba(247, 249, 250, 1);
     &-container{
-        padding-left: 10px;
-        padding-right: 10px;
         padding-bottom: 20px;
-        @include for-tablet{
-            padding-left: 38px;
-            padding-right: 38px;
-        }
-        @include for-desktop{
-            padding-left: 70px;
-            padding-right: 70px;
-        }
-        @include for-desktop-HD{
-            padding-left: 145px;
-            padding-right: 145px;
-        }
     }
     &__content{
         display: flex;
@@ -37,8 +23,11 @@
         }
         &-social{
             max-width: 130px;
-            margin: 0px auto;
-            margin-top: 19px;
+            margin: {
+                left: auto;
+                right: auto;
+                top: 19px;
+            }
             @include for-desktop{
                 margin-left: 0px;
             }
@@ -47,8 +36,6 @@
             max-width: 306px;
             font-size: 16px;
             line-height: 20px;
-            color: $MainColor;
-            font-family: 'Raleway', sans-serif;
             margin-top: 19px;
             text-align: center;
             @include for-desktop{
@@ -63,8 +50,6 @@
         margin-top: 60px;
         &-title{
             font-size: 30px;
-            font-family: 'Bitter', serif;
-            color: $MainColor;
             margin-bottom: 12px;
             text-align: center;
             @include for-desktop{
@@ -83,8 +68,6 @@
             &-subtitle{
                 font-size: 16px;
                 line-height: 18px;
-                font-family: 'Raleway', sans-serif;
-                color: $MainColor;
                 padding-left: 10px;
                 max-width: 190px;
             }
@@ -94,8 +77,6 @@
         margin-top: 60px;
         &-title{
             font-size: 30px;
-            color: $MainColor;
-            font-family: 'Bitter', serif;
             text-align: center;
             @include for-desktop{
                 text-align: left;
@@ -119,10 +100,12 @@
                 display: block;
                 max-width: 80px;
                 height: 48px;
-                padding-top: 14px;
-                padding-bottom: 14px;
-                padding-left: 20px;
-                padding-right: 20px;
+                padding: {
+                    top: 14px;
+                    bottom: 14px;
+                    left: 20px;
+                    right: 20px;
+                }
                 color: $White;
                 background-color: rgba(118, 143, 156, 1);
                 border-top-right-radius: 7px;
@@ -138,8 +121,11 @@
             }
         }
         &-additional{
-            margin: 0px auto;
-            margin-top: 20px;
+            margin: {
+                left: auto;
+                right: auto;
+                top: 20px;
+            }
             max-width: 144px;
             @include for-desktop{
                 margin-left: 0px;
@@ -170,8 +156,6 @@
         &-subtitle{
             margin-top: 20px;
             font-size: 16px;
-            font-family: 'Raleway', sans-serif;
-            color: $MainColor;
             text-align: center;
             @include for-desktop{
                 text-align: left;
@@ -191,9 +175,7 @@
             margin-top: 22px;
             &-names{
                 font-size: 12px;
-                font-family: 'Raleway', sans-serif;
                 padding-right: 10px;
-                color: $MainColor;
             }
         }
         &-authors{

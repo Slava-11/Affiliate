@@ -1,25 +1,9 @@
 .products{
     &-container{
         margin-top: 100px;
-        padding-left: 10px;
-        padding-right: 10px;
-        @include for-tablet{
-            padding-left: 38px;
-            padding-right: 38px;
-        }
-        @include for-desktop{
-            padding-left: 70px;
-            padding-right: 70px;
-        }
-        @include for-desktop-HD{
-            padding-left: 145px;
-            padding-right: 145px;
-        }
     }
     &__title{
         font-size: 38px;
-        font-family: 'Bitter', serif;
-        color: $MainColor;
         text-align: center;
         @include for-desktop{
             text-align: left;
@@ -35,8 +19,11 @@
         background-color: rgba(247, 249, 250, 1);
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
-        margin: 0px auto;
-        margin-top: 33px;
+        margin: {
+            left: auto;
+            right: auto;
+            top: 33px;
+        }
         overflow: hidden;
         width: 330px;
         @include for-desktop{
@@ -60,15 +47,18 @@
                 z-index: 2;
                 font-size: 12px;
                 color: $White;
-                padding-top: 5px;
-                padding-bottom: 5px;
-                padding-left: 10px;
-                padding-right: 10px;
+                padding: {
+                    top: 5px;
+                    bottom: 5px;
+                    left: 10px;
+                    right: 10px;
+                }
                 background-color: $MainBackgroundColor;
                 border-radius: 3px;
-                margin-top: 15px;
-                margin-left: 15px;
-                font-family: 'Raleway', sans-serif;
+                margin: {
+                    top: 15px;
+                    left: 15px;
+                }
             }
         }
         &-title,&-subtitle{
@@ -76,8 +66,6 @@
         }
         &-title{
             font-size: 28px;
-            font-family: 'Bitter', serif;
-            color: $MainColor;
             padding-top: 25px;
             text-align: center;
             @include for-desktop{
@@ -87,10 +75,10 @@
         &-subtitle{
             font-size: 15px;
             line-height: 20px;
-            font-family: 'Raleway', sans-serif;
-            color: $MainColor;
-            padding-top: 14px;
-            padding-bottom: 40px;
+            padding: {
+                top: 14px;
+                bottom: 40px;
+            }
             text-align: center;
             @include for-desktop{
                 text-align: left;

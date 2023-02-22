@@ -1,20 +1,5 @@
 .mail{
     margin-top: 50px;
-    padding-left: 10px;
-        padding-right: 10px;
-        @include for-tablet{
-            padding-left: 38px;
-            padding-right: 38px;
-        }
-        @include for-desktop{
-            padding-left: 70px;
-            padding-right: 70px;
-        }
-        @include for-desktop-HD{
-            padding-left: 145px;
-            padding-right: 145px;
-            margin-top: 100px;
-        }
     &-container{
         background: {
             image: url(/src/img/main-background.jpg);
@@ -38,7 +23,7 @@
         &-letter{
             width: 100%;
             @include for-tablet{
-                display: block;
+                 display: block;
                  width: 500px;
                  height: 350px;
                  margin: 0px auto;
@@ -74,15 +59,10 @@
     }
     &__title{
         font-size: 30px;
-        font-family: 'Bitter', serif;
-        color: $MainColor;
         padding-left: 10px;
     }
     &__subtitle{
-        font-size: 18px;
         line-height: 24px;
-        color: $MainColor;
-        font-family: 'Raleway', sans-serif;
         padding-top: 45px;
         text-align: center;
         @include for-tablet{
@@ -93,20 +73,21 @@
         @include for-desktop{
             text-align: left;
         }
-         
     }
     &__your-email-text{
         display: block;
         width: 300px;
         height: 50px;
-        margin: 0px auto;
+        margin: {
+            left: auto;
+            right: auto;
+            top: 20px;
+        }
         border-radius: 5px;
         border: 1px solid rgba(170, 188, 197, 1);
         text-align: center;
         font-size: 12px;
         color: rgba(83, 109, 122, 1);
-        font-family: 'Raleway', sans-serif;
-        margin-top: 20px;
         @include for-desktop{
             width: 350px;
             margin: 0px;
@@ -119,8 +100,11 @@
         display: flex;
         align-items: center;
         max-width: 200px;
-        margin: 0px auto;
-        margin-top: 30px;
+        margin: {
+            left: auto;
+            right: auto;
+            top: 30px;
+        }
         @include for-desktop{
             margin: 0px;
             margin-top: 30px;
@@ -130,13 +114,14 @@
         text-decoration: none;
         display: block;
         max-width: 80px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 15px;
-        padding-top: 15px;
+        padding: {
+            left: 20px;
+            right: 20px;
+            bottom: 15px;
+            top: 15px;
+        }
         text-align: center;
         font-size: 12px;
-        font-family: 'Raleway', sans-serif;
         &-submit{
             background-color: rgba(255, 199, 40, 1);
             color: $Black;

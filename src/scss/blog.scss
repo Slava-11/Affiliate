@@ -1,25 +1,9 @@
 .blog{
     &-container{
         padding-top: 70px;
-        padding-left: 10px;
-        padding-right: 10px;
-        @include for-tablet{
-            padding-left: 38px;
-            padding-right: 38px;
-        }
-        @include for-desktop{
-            padding-left: 70px;
-            padding-right: 70px;
-        }
-        @include for-desktop-HD{
-            padding-left: 145px;
-            padding-right: 145px;
-        }
     }
     &__title{
         font-size: 32px;
-        font-family: 'Bitter', serif;
-        color: $MainColor;
         text-align: center;
         @include for-tablet{
             text-align: center;
@@ -74,8 +58,6 @@
         }
         &-title{
             font-size: 30px;
-            font-family: 'Bitter', serif;
-            color: $MainColor;
             padding-top: 9px;
             line-height: 35px;
             text-align: center;
@@ -86,7 +68,6 @@
         &-subtitle{
             font-size: 15px;
             line-height: 20px;
-            font-family: 'Raleway', sans-serif;
             padding-top: 13px;
             text-align: center;
             text-align: center;
@@ -104,7 +85,6 @@
         }
         @include for-desktop-HD{
             display: block;
-            
         }
         &-img{
             width: 100%;
